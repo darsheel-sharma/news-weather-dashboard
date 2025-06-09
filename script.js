@@ -62,3 +62,52 @@ window.onload = () => {
 // when we click search button it uses fetchCityWeather func
 
 document.querySelector(".searchbutton").addEventListener("click", fetchCityWeather);
+
+// for fetching news data
+
+const getNews = async (category = 'business') => {
+  const response = await fetch(`https://newsdata.io/api/1/news?apikey=pub_832fe13d4cc44ca496e4ad7ffb7b6512&country=in&category=${category}&language=en`);
+  if (response.status !== 200) {
+    throw new Error("Cannot fetch the news data");
+  }
+
+  const data = await response.json();
+  return data;
+};
+
+// upadates news data in the unordered list
+
+const updateNews = (data) => {
+  const newsList = document.querySelector('.newslist');
+  newsList.innerHTML = '';
+
+  if (!data) {
+    newsList.innerHTML = '<li>No news found.</li>';
+    return;
+  }
+
+  data.results.slice(0, 5).forEach(article => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.textContent = article.title;
+    a.href = article.link;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+
+    li.appendChild(a);
+    newsList.appendChild(li);
+  });
+};
+
+getNews()
+    .then(data => updateNews(data))
+    .catch(err => updateNews(err));
+
+// shows news for category selected from dropdown
+
+document.querySelector('#type').addEventListener('change', (e) => {
+  const category = e.target.value;
+  getNews(category)
+    .then(data => updateNews(data))
+    .catch(err => updateNews(err));
+});
