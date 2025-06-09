@@ -187,3 +187,65 @@ body {
 .sunset {
   grid-area: sunset;
 }
+
+/* News box*/
+.newsbox {
+  grid-area: newsbox;
+  border-radius: 1rem;
+  border: 0.0625rem solid #ccc;
+  background-color: #ffffff;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  transition: all 0.3s ease;      
+  overflow-y: auto;       
+  overflow-x: hidden;
+  height: 31.5rem;  
+}
+
+#type {
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  border: 0.125rem solid #007bff;
+  border-radius: 1rem;
+  background-color: #f0f8ff;
+  color: #007bff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.newslist {
+  margin: 2rem 0 0 0;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.newslist li {
+  margin-bottom: 1rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
+  background-color: #f3f6ff;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.newslist li::before {
+  content: '📰';
+  margin-right: 0.5rem;
+  position: absolute;
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.newslist li:hover {
+  background-color: #e0eaff;
+  color: #000;
+  cursor: pointer;
+  transform: scale(1.02);
+}

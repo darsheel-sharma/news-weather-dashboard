@@ -11,69 +11,110 @@
 <body>
 
     <div class="top">My Weather & News APP</div>
+
     <div class="weatherbox">
+
         <div class="searchbox">
             <input type="text" placeholder="Type City Name" class="cityinput"/>
             <button class="searchbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
+
         <div class="datetime">
             Friday, 6 Jun 2025 | Time: 19:29 PM
         </div>
+
         <div class="city">
             Jaipur, IN
         </div>
+
         <div class="weatherdisc">
             Cloudy
             <i class="fa-solid fa-cloud"></i>
         </div>
+
         <div class="tempbox">
+
             <div class="realtemp">
                 <div class="realtempval">36.96°C</div>
                 <div class="realtemptitle">Real Temperature</div>
             </div>
+
             <div class="feeltemp box">
                 <i class="fa-solid fa-temperature-three-quarters"></i>
                 <div>
                 Real feel: <span class="feeltempval">35.53°C</span>
                 </div>
             </div>
+
             <div class="mintemp box">
                 <i class="fa-solid fa-temperature-arrow-down"></i>
                 <div>
                 Min-Temp: <span class="mintempval">36.96°</span>
                 </div>
             </div>
+
             <div class="maxtemp box">
                 <i class="fa-solid fa-temperature-arrow-up"></i>
                 <div>
                 Max-Temp: <span class="maxtempval">36.96°</span>
                 </div>
             </div>
+
             <div class="sunset box">
                 <i class="fa-solid fa-mountain-sun"></i>
                 <div>
                 Set: <span class="sunsettime">19:26PM</span>
                 </div>
             </div>
+
             <div class="sunrise box">
                 <i class="fa-solid fa-sun"></i>
                 <div>
                 Rise: <span class="sunrisetime">05:15AM</span>
                 </div>
             </div>
+
             <div class="humidity box">
                 <i class="fa-solid fa-droplet"></i>
                 <div>
                 Humidity: <span class="humidityval">21%</span>
                 </div>
             </div>
+
             <div class="wind box">
                 <i class="fa-solid fa-wind"></i>
                 <div>
                 Wind: <span class="windval">5.12ms</span>
                 </div>
             </div>
+
         </div>
+
+    </div>
+
+    <div class="newsbox">
+        <label for="type">Choose a category:</label>
+        <select id="type">
+            <option value="business">Business</option>
+            <option value="crime">Crime</option>
+            <option value="domestic">Domestic</option>
+            <option value="education">Education</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="environment">Environment</option>
+            <option value="food">Food</option>
+            <option value="health">Health</option>
+            <option value="lifestyle">Lifestyle</option>
+            <option value="other">Other</option>
+            <option value="politics">Politics</option>
+            <option value="science">Science</option>
+            <option value="sports">Sports</option>
+            <option value="technology">Technology</option>
+            <option value="top">Top</option>
+            <option value="tourism">Tourism</option>
+            <option value="world">World</option>
+        </select>
+
+        <ul class="newslist"></ul>
     </div>
 
     <script src="script.js"></script>
