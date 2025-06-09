@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 0.7fr 0.3fr;
+  grid-template-rows: 0.2fr 0.8fr;
+  grid-template-areas: 
+    "top top"
+    "weatherbox newsbox";
+  gap: 1.25rem;
+  padding: 1.25rem;
+  background-color: #e0eafc;
+}
