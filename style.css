@@ -30,3 +30,160 @@ body {
   font-size: 3.3rem;
   font-weight: bold;
 }
+
+/** Header **/
+.top {
+  grid-area: top;
+  background-color: #007bff;
+  color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.3rem 0.95rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 3.3rem;
+  font-weight: bold;
+}
+
+/** Weather Box **/
+.weatherbox {
+  grid-area: weatherbox;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.1);
+  color: #333;
+  height: 31.5rem;
+}
+
+/** Search Bar **/
+.searchbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 2rem auto;
+  max-width: 31rem;
+  background-color: #f8f9fa;
+  border: 0.125rem solid #007bff;
+  border-radius: 3rem;
+  padding: 0.8rem 1.2rem;
+  box-shadow: 0.25rem 0.4rem 0 0.06rem rgba(0, 123, 255, 0.2);
+}
+
+.cityinput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 0.6rem;
+  background-color: transparent;
+}
+
+.searchbutton {
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #007bff;
+}
+
+/**Weather information **/
+.datetime {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.city {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.weatherdisc {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/** Temperature box grid **/
+.tempbox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+  "realtemp realtemp realtemp feeltemp"
+  "realtemp realtemp realtemp humidity"
+  "realtemp realtemp realtemp wind"
+  "sunrise sunset maxtemp mintemp";
+  grid-gap: 1rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.625rem;
+  padding: 1rem;
+  background-color: #f1f5f9;
+  box-shadow: inset 0 0 0.3rem rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  margin: 0 4rem 0 4rem;
+  text-align: center;
+  align-items: center;
+  color: black;
+}
+
+.tempbox i {
+  font-size: 1.2rem;
+}
+
+.realtemp {
+  grid-area: realtemp; 
+}
+
+.realtempval {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.realtemptitle {
+  font-size: 0.7rem;
+}
+
+.box {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 1rem 0 1rem;
+}
+
+.feeltemp {
+  grid-area: feeltemp;
+}
+
+.mintemp {
+  grid-area: mintemp;
+  padding: 0;
+}
+
+.maxtemp {
+  grid-area: maxtemp;
+  padding: 0;
+}
+
+.humidity {
+  grid-area: humidity;
+}
+
+.wind {
+  grid-area: wind;
+}
+
+.sunrise {
+  grid-area: sunrise;
+}
+
+.sunset {
+  grid-area: sunset;
+}
