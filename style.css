@@ -17,3 +17,16 @@ body {
   padding: 1.25rem;
   background-color: #e0eafc;
 }
+
+/** top bar **/
+.top {
+  grid-area: top;
+  background-color: #007bff;
+  color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.3rem 0.95rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 3.3rem;
+  font-weight: bold;
+}
