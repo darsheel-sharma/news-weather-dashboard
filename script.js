@@ -45,7 +45,7 @@ const updateWeather = (data) => {
 // takes city input from user
 
 const fetchCityWeather = () => {
-  const city = document.querySelector(".cityinput").value;
+  const city = document.querySelector(".cityinput").value.trim();
   getWeather(city)
     .then(data => updateWeather(data))
     .catch(err => alert(err.message));
